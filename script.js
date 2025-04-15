@@ -22,7 +22,7 @@ document.addEventListener('DOMContentLoaded', () => {
         }
 
         try {
-            const response = await fetch(`https://steam-coop-site.netlify.app/getSteamInfo/${appId}`);
+            const response = await fetch(`https://steam-coop-site.netlify.app/netlify/functions/getSteamInfo/${appId}`);
             if (!response.ok) throw new Error('Помилка запиту до сервера!');
 
             const game = await response.json();
